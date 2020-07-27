@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePage } from './home.page';
 import { HomeRoutingModule } from './home-routing.module';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations: [
@@ -9,7 +10,8 @@ import { HomeRoutingModule } from './home-routing.module';
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        ChartsModule,
     ],
     entryComponents: [
         HomePage

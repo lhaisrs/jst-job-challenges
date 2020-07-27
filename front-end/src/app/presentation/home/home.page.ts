@@ -10,13 +10,12 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./home.page.scss']
 })
 export class HomePage implements OnInit {
-
   facts$: Observable<FactModel[]>;
 
   constructor(private list: FactUsecase) { }
 
   async ngOnInit() {
-    this.facts$ = this.list.execute();
+    this.facts$ = this.list.fetch();
   }
 
 }

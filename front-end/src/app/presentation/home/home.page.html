@@ -1,14 +1,5 @@
 <div>
-   <table>
-       <tr>
-           <th>Name:</th>
-           <th>Type:</th>
-           <th>Fact: </th>
-       </tr>
-       <tr *ngFor="let item of (facts$ | async)">
-           <td>{{ item.entity.user?.name.first }} {{ item.entity.user?.name.last }}</td>
-           <td>{{ item.entity.type }}</td>
-           <td>{{ item.entity.text}}</td>
-       </tr>
-   </table>
+  <div>
+    <h1>Animals Facts</h1>
+  </div>
 </div>
