@@ -2,7 +2,7 @@
 
 ### Requisitos mandatórios
 
-@icon-check Uso Algum framework/biblioteca, como React, Vue, Angular 2+ ou JavaScript Vanilla.
+@icn-check Uso Algum framework/biblioteca, como React, Vue, Angular 2+ ou JavaScript Vanilla.
 - Biblioteca para requisições HTTP (ex.: Axios), ou Fetch API.
 - Algum pré-processador CSS, como SASS, LESS, ou algum outro.
 - Ser responsivo.
