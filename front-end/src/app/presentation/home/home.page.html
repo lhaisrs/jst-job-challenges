@@ -1,5 +1,87 @@
-<div>
-  <div>
-    <h1>Animals Facts</h1>
+<div class="uk-container">
+  <!-- Title -->
+  <div class="uk-padding">
+    <p class="uk-text-lead">Animals Facts</p>
+    <hr class="uk-divider-small" />
+  </div>
+  <!-- Grid: Total number, charts and table -->
+  <div uk-grid class="uk-padding">
+    <!-- Total number and charts -->
+    <div>
+      <!-- Total Facts -->
+      <div class="uk-card uk-card-primary uk-card-body uk-padding">
+        <p class="uk-card-title">Total Facts:</p>
+        <ng-container
+          *ngIf="(list.busy$ | async); then isTotalFactsLoading; else hasTotalFactsLoaded"
+        ></ng-container>
+        <ng-template #isTotalFactsLoading>
+          <div uk-spinner></div>
+        </ng-template>
+        <ng-template #hasTotalFactsLoaded>
+          <p class="uk-text-large uk-text-bold">
+            {{ (facts$ | async )?.length }}
+          </p>
+        </ng-template>
+      </div>
+      <!-- Charts -->
+      <div class="uk-card uk-card-default uk-card-body">
+        <ng-container
+          *ngIf="(list.sort() | async); then hasData; else noData"
+        ></ng-container>
+        <ng-template #hasData>
+          <div style="display: block;">
+            <canvas baseChart>
+              [datasets]="barChartData" [labels]="barChartLabels"
+              [options]="barChartOptions" [chartType]="barChartType"
+              [legend]="barChartLegend" [plugins]="barChartPlugins"
+            </canvas>
+          </div>
+        </ng-template>
+        <ng-template #noData>          
+          <div>Carregando...</div>
+        </ng-template>
+      </div>
+    </div>
+    <!-- Table -->
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <table
+          class="uk-table uk-table-divider uk-table-justify uk-table-responsive"
+        >
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Text</th>
+              <th>Type</th>
+              <th>Votes</th>
+            </tr>
+          </thead>
+          <ng-container
+            *ngIf="(list.busy$ | async); then isTableDataLoading; else hasDataLoaded"
+          ></ng-container>
+          <ng-template #isTableDataLoading>
+            <div uk-spinner></div>
+          </ng-template>
+          <ng-template #hasDataLoaded>
+            <tbody>
+              <tr
+                *ngFor="let fact of (facts$ | async) | paginate: { itemsPerPage: 10, currentPage: page }; let i = index"
+              >
+                <td>
+                  {{ fact.entity.user?.name.first }} {{
+                  fact.entity.user?.name.last }}
+                </td>
+                <td>{{ fact.entity.text }}</td>
+                <td>{{ fact.entity.type }}</td>
+                <td>{{ fact.entity.upvotes }}</td>
+              </tr>
+            </tbody>
+          </ng-template>
+        </table>
+      </div>
+      <div class="uk-container uk-padding section-pagination">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </div>
   </div>
 </div>

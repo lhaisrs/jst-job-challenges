@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePage } from './home.page';
 import { HomeRoutingModule } from './home-routing.module';
 import { ChartsModule } from 'ng2-charts';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
     declarations: [
@@ -12,6 +13,7 @@ import { ChartsModule } from 'ng2-charts';
         CommonModule,
         HomeRoutingModule,
         ChartsModule,
+        NgxPaginationModule
     ],
     entryComponents: [
         HomePage
