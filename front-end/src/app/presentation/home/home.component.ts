@@ -8,13 +8,15 @@ import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePage implements OnInit {
+
+export class HomeComponent implements OnInit {
+
   public facts$: Observable<FactModel[]>;
-  public page: number = 1;
+  public page = 1;
 
   // BarChart
   public barChartOptions: ChartOptions = {
