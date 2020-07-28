@@ -42,7 +42,6 @@ export class HomePage implements OnInit {
     this.list.loading().subscribe();
     this.facts$ = this.list.fetch();
     this.list.sort().subscribe((mostVotedFacts) => {
-      console.log('Most Voted: ', mostVotedFacts);
       this.barChartData.data = mostVotedFacts.map((item) => item.entity.upvotes);
       this.barChartLabels = mostVotedFacts.map((item) => item.entity.upvotes.toString());
     });

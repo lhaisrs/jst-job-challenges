@@ -1,9 +1,8 @@
 import { environment } from './../../../environments/environment.prod';
-import { FactEntity } from './../entities/fact.entity';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FactModel } from 'src/app/domain/models/fact.model';
-import { map, switchMap, toArray, mergeMap } from 'rxjs/operators';
+import { map, toArray, mergeMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { ResultEntity } from '../entities/result.entity';
 
