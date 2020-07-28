@@ -1,3 +1,8 @@
 .section-pagination {
-    text-align: -webkit-center;
+  text-align: -webkit-center;
+  padding-right: var(--spacing-6);
+}
+
+.canvas-bar-wrapper {
+  display: block;
 }

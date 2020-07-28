@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import './theme/_spacing.scss'; //Spacings scales
+
 html, body {
     font-family: 'Mulish', sans-serif;
 }

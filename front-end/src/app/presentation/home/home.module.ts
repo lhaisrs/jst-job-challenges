@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { ChartsModule } from 'ng2-charts';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations: [
@@ -12,8 +12,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     imports: [
         CommonModule,
         HomeRoutingModule,
-        ChartsModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        ChartsModule
     ],
     entryComponents: [
         HomeComponent
