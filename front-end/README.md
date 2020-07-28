@@ -19,7 +19,7 @@ Entre os critérios de avaliação estão:
 - [x] Usabilidade da aplicação.
 - [x] Código limpo e organização.
 - [x] Documentação de código.
-- Documentação do projeto (readme).
+- [x] Documentação do projeto (readme).
 - Performance.
 - Testes (Jest, Testing Library, Karma, Jasmine ou E2E com Cypress)
 
