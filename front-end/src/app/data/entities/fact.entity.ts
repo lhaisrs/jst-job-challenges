@@ -1,3 +1,7 @@
+/*
+    FactEntity: Entidade principal com os dados do fact
+*/
+
 export interface FactEntity {
     id: string;
     text: string;

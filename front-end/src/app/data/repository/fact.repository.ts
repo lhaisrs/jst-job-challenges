@@ -1,3 +1,9 @@
+/*
+    FactRepository: Realiza a requisição HTTP para CatFactAPI
+                    retornando ResultEntity e fazemos a conversão
+                    para um array de FactModel
+*/
+
 import { environment } from './../../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';

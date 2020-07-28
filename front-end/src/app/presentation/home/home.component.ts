@@ -15,7 +15,7 @@ import { Label } from 'ng2-charts';
 export class HomeComponent implements OnInit {
 
   public facts$: Observable<FactModel[]>;
-  public page = 1;
+  public page = 1; // First Page Pagination
 
   // BarChart
   public barChartOptions: ChartOptions = {

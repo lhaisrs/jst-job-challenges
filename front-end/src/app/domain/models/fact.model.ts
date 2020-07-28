@@ -1,3 +1,7 @@
+/*
+    FactModel: Model principal que utiliza FactEntity
+*/
+
 import { FactEntity } from './../../data/entities/fact.entity';
 
 export class FactModel {

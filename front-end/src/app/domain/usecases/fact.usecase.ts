@@ -1,3 +1,8 @@
+/*
+    FactUsecase: Realiza toda a lógica de negócio de comunicação
+                 com o repositório e com o componente (view)
+*/
+
 import { Injectable } from '@angular/core';
 import { FactModel } from '../models/fact.model';
 import { FactRepository } from 'src/app/data/repository/fact.repository';
